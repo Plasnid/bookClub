@@ -1,0 +1,19 @@
+<div>
+  <div class="form-group">
+    <label for="searchCategories">Search Categories</label>
+    <select class="form-control" id="searchCategories" data-ng-model="order.field">
+        <option value="title">Title</option>
+        <option value="lastName">Last Name</option>
+        <option value="genre" selected>Genre</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="searchFilter">Search Filter:</label> <input class="form-control" id="searchFilter" type="text" ng-model="bookFilter">
+  </div>
+  <div class="form-group">
+    <label for="reverseOrder">Reverse Order:</label> <input class="form-check" id="reverseOrder" type="checkbox" data-ng-model="order.reverse"/>
+  </div>
+  <ul class="list-group">
+    <book-directive></book-directive>
+  </ul>
+</div>

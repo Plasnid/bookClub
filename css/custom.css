@@ -1,0 +1,19 @@
+.book-tag{
+    font-weight: bold;
+}
+.book-item p{
+  margin: 0;
+  padding: 0;
+}
+.book-item:nth-child(even){
+  background-color: #fff;
+}
+.book-item:nth-child(odd){
+  background-color: #ddd;
+}
+.horizontal-collapse {
+  height: 70px;
+}
+.navbar-collapse.in {
+  overflow-y: hidden;
+}

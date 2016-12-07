@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Club</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-touch.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+
+    <!-- angular bootstrap js -->
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.8/angular-strap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.8/angular-strap.tpl.min.js"></script-->
+    <!-- end of angular bootstrap -->
+    <script src="bookClubApp.js"></script>
+    <script src="services/bookData.js"></script>
+    <script src="services/historyData.js"></script>
+    <!-- page controllers -->
+    <script src="controllers/bookController.js"></script>
+    <script src="controllers/historyController.js"></script>
+    <!-- end of page controllers-->
+    <script src="controllers/CollapseController.js"></script>
+    <script src="controllers/accordianController.js"></script>
+    <script src="directives/bookDirective.js"></script>
+    <script src="directives/historyBookDirective.js"></script>
+    <!--directive controller -->
+    <script src="controllers/historyEntryController.js"></script>
+    <!-- -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body ng-app="bookClubApp">
+    <div ng-controller="CollapseCtrl">
+    <!--div class=""-->
+      <nav class="navbar navbar-default" role="navigation">
+  		  <div class="navbar-header">
+  			  <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+  				<span class="sr-only">Toggle navigation</span>
+  				<span class="icon-bar"></span>
+  				<span class="icon-bar"></span>
+  				<span class="icon-bar"></span>
+  			</button>
+  			<a class="navbar-brand" href="#/">Book Club</a>
+  		</div>
+  		<div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+  			<ul class="nav navbar-nav">
+  				<li><a href="#/">Books</a></li>
+  				<li><a href="#/history">History</a></li>
+          <li><a href="#/next">Next</a></li>
+  			</ul>
+  		</div>
+  	</nav>
+    </div>
+    <div ng-view></div>
+    <!--footer>
+      the footer should go here
+    </footer-->
+  </body>
+</html>

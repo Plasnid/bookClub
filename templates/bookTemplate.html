@@ -1,0 +1,11 @@
+<li class="list-group-item book-item" data-ng-repeat="book in books | orderBy:dynamicOrder:order.reverse |filter:bookFilter">
+  <p>
+    <span class="book-tag">Title:</span> {{book.title}}
+  </p>
+  <p>
+    <span class="book-tag">Author:</span> {{book.firstName}} {{book.lastName}}
+  </p>
+  <p>
+    <span class="book-tag">Genre:</span> {{book.genre}}
+  </p>
+</li>

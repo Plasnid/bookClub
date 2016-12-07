@@ -1,0 +1,17 @@
+<div>
+  <div ng-controller="accordionController">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="oneAtATime">
+        Open only one at a time
+      </label>
+    </div>
+    <uib-accordion close-others="oneAtATime">
+      <div uib-accordion-group class="panel-default" ng-repeat="history in bookHistory" heading="{{history.year}}">
+        <ul>
+          <history-book-directive bookDataCheck="bookDataCheck()"></history-book-directive>
+        </ul>
+      </div>
+    </uib-accordion>
+  </div>
+</div>

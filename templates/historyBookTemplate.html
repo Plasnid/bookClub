@@ -1,0 +1,15 @@
+<li class="list-group-item book-item" zortae="morp" data-ng-repeat="book in history.books">
+  <p>
+    <span class="book-tag">Title:</span> {{book.title}}
+  </p>
+  <p>
+    <span class="book-tag">Author:</span> {{book.firstName}} {{book.lastName}}
+  </p>
+  <p ng-show="book.genre != null">
+    <span class="book-tag">Genre:</span> {{book.genre}}
+  </p>
+  <p ng-show="book.selectedBy != null">
+    <span class="book-tag">Chosen By:</span> {{book.selectedBy}}
+  </p>
+  <a ng-click="showBookInfo(book.title, book.firstName, book.lastName)">what have we here?</a>
+</li>
